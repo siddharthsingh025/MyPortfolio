@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ffaaa0118b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- ..................Home............... -->    
+    <div id="header">
+        <div class="container">
+            <nav >
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Android Developer</p>
+                <h1>Hi, I'm <span>Siddharth Singh</span><br>From India</h1>
+            </div>
+        </div>
+    </div>
+
+<!-- ..................about............... -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Quisquam nostrum velit iure, perferendis id nisi officia 
+                        deleniti sequi tempora placeat illum consequuntur, aperiam deserunt. 
+                        Iure doloremque debitis dolorum excepturi similique!
+                        Quisquam nostrum velit iure, perferendis id nisi officia 
+                        deleniti sequi tempora placeat illum consequuntur, aperiam deserunt. 
+                        Iure doloremque debitis dolorum excepturi similique!</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-links"  onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                    
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Android Development</span><br>Android app with kotlin/java</li>
+                                <li><span>Competitive Programmer</span><br>Problem-solving and DSA with java</li>
+                                <li><span>DevOps Eng</span><br>to be...</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>14 Sep - 3 Dec 2022</span><br><b>Teaching Assistant Intern </b>at Coffeee.io</li>
+                                <li><span>1 Nov - 31 Dec 2021</span><br><b>Graphic Design Intern</b> at Kluster Wise Pvt.Ltd</li>
+                            
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2020-24</span><br><b>B.Tech</b><br>Electronics and Communication Engineering<br>Delhi Technological University, New Delhi</li>
+                                <li><span>2019</span><br>12th From K.V.No.2 Delhi Cantt-110010</li>
+                                <li><span>2017</span><br>10th From K.V.No.2 Delhi Cantt-110010</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ...............Services..................... -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>Build Your Android App</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Quasi, dolorum itaque?</p>
+                    <a href="#">Learn more </a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Read My Blogs</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Quasi, dolorum itaque?</p>
+                    <a href="#">Learn more </a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-infinity"></i>
+                    <h2>DevOps</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Quasi, dolorum itaque?</p>
+                    <a href="#">Learn more </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-links");
+        }
+
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+ </script>   
+
+</body>
+</html>
