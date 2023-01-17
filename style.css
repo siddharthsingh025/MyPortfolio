@@ -100,7 +100,9 @@ font-size: 30px;
     border-radius: 15px;
 }
 .about-col-2{
+    padding-top: 200px;
     flex-basis:60% ; /*width of the colmn is 60% */
+
 }
 .subtitle{
     font-size: 60px;
